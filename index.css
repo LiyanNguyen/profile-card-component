@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+	/* Primary Colors */
+	--dark-cyan: hsl(185, 75%, 39%);
+	--dark-blue: hsl(229, 23%, 23%);
+	--grayish-blue: hsl(227, 10%, 46%);
+
+	/* Neutral Colors */
+	--dark-gray: hsl(0, 0%, 59%);
+
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 18px; /*name and stats*/
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+	background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position: 0% -23rem, 100% 23rem;
+	background-size: contain, contain;
+	background-color: var(--dark-cyan);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.main-card {
+	width: 21rem;
+	min-height: 23rem;
+	border-radius: 1rem;
+	background-color: white;
+	display: grid;
+	grid-template-rows: .6fr .6fr .4fr;
+}
+
+.cover-img {
+	border-radius: 1rem 1rem 0 0;
+	background-image: url(images/bg-pattern-card.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.profile-content {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 2rem;
+}
+
+.profile-img {
+	position: absolute;
+	top: -3rem;
+	left: 8rem;
+	border-radius: 50%;
+	outline: .3rem solid white;
+}
+
+.age {
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--grayish-blue);
+}
+
+.location {
+	padding-top: .5rem;
+	font-size: .8rem;
+	color: var(--grayish-blue);
+}
+
+
+.profile-stats {
+	padding: 1rem;
+	border-top: 1px solid var(--dark-gray);
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.followers,
+.likes,
+.photos {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.stat {
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+.stat-atr {
+	letter-spacing: .1rem;
+	font-weight: 400;
+	font-size: .6rem;
+	color: var(--dark-gray);
+}
